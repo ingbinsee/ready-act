@@ -8,17 +8,17 @@ import Creator from '@/parts/create/Creator';
 import DatePicker from '@/parts/create/DatePicker';
 import FileUpload from '@/parts/create/FileUpload';
 // import MeetingPoint from '@/parts/create/MeetingPoint';
-import Location from '@/parts/map/Location';
 import ParticipateCounter from '@/parts/create/ParticipateCounter';
 import PaymentToggleButton from '@/parts/create/PaymentToggleButton';
+import Price from '@/parts/create/Price';
 import Status from '@/parts/create/Status';
+import Title from '@/parts/create/Title';
+import Location from '@/parts/map/Location';
 import { ClientResponseError } from 'pocketbase';
 import { useContext, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
-import Price from '@/parts/create/Price';
-import Title from '@/parts/create/title';
-import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 
 function CreateRoom() {
