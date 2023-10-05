@@ -119,7 +119,7 @@ function CreateRoom() {
         <meta property="og:article:author" content="Ready! Act" />
       </Helmet>
 
-      <h1 className="sr-only">R09M</h1>
+      <h1 className="sr-only">R09M(공구룸)</h1>
 
       <div className="py-2">
         <div className="px-4">

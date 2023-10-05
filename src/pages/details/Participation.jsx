@@ -6,6 +6,7 @@ import {useRef, useState} from 'react';
 import {useParams} from 'react-router-dom';
 import Dialog from './Dialog';
 import {useNavigate} from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 function Participation({onUpdateParticipation}) {
   const {id} = useParams();
@@ -36,7 +37,18 @@ function Participation({onUpdateParticipation}) {
   }
 
   const handleOpen = () => {
-    setOpen(true);
+    if (localStorage.getItem('pocketbase_auth')) {
+      setOpen(true);
+    } else {
+      toast.error('로그인된 사용자만 이용이 가능합니다.', {
+        position: 'top-center',
+        ariaProps: {
+          role: 'status',
+          'aria-live': 'polite',
+        },
+      });
+      navigate('/signin');
+    }
   };
 
   const handleClose = () => {

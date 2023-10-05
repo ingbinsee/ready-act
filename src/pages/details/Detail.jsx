@@ -88,7 +88,7 @@ function Detail() {
       <div className="px-4 py-2">
         <Header link="/products" />
       </div>
-      <h1 className="sr-only">R09M</h1>
+      <h1 className="sr-only">R09M(공구룸)</h1>
       <div className="flex justify-center mt-2">
         <DetailStatus />
       </div>

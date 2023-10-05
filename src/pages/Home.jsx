@@ -75,9 +75,9 @@ function Home() {
         <meta property="og:article:author" content="Ready! Act" />
       </Helmet>
       <div className="relative p-2">
-        <h1 className="sr-only">R09M</h1>
+        <h1 className="sr-only">R09M(공구룸)</h1>
         <Link to="/home">
-          <img src={logo} alt="공구룸 로고" className="w-12 h-12 m-auto" />
+          <img src={logo} alt="공구룸 홈" className="w-12 h-12 m-auto" />
         </Link>
         <h2 className="text-lg font-semibold pb-4">공구룸</h2>
         <h3 className="sr-only">카테고리</h3>

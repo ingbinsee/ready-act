@@ -70,7 +70,7 @@ function DetailMap() {
         <Header link={`/products/${id}`} />
       </div>
       <div ref={detailMapRef} className="w-full h-[600px] my-3 relative">
-        <h1 className="sr-only">R09M</h1>
+      <h1 className="sr-only">R09M(공구룸)</h1>
         <Button
           type="button"
           className={`${styles.button} right-2 bottom-4 bg-white p-2`}

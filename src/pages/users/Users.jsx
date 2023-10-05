@@ -62,12 +62,10 @@ function Users() {
       <div className="px-4 py-2">
         <Header link={`/products/${id}`} />
       </div>
-
-      <h1 className="sr-only">R09M</h1>
+      <h1 className="sr-only">R09M(공구룸)</h1>
       <div className="flex items-center">
-      <h2 className="text-lg font-semibold pb-2 mx-auto">참여자 목록</h2>
+        <h2 className="text-lg font-semibold pb-2 mx-auto">참여자 목록</h2>
       </div>
-
       <ul className="pl-4">
         <li className="flex mb-3 mt-2 items-center font-semibold text-lg">
           <img
@@ -83,7 +81,7 @@ function Users() {
           <span className="pl-3 font-extrabold text-lg">{creator.name}</span>
         </li>
       </ul>
-      <hr className='my-3 w-[95vw] m-auto' />
+      <hr className="my-3 w-[95vw] m-auto" />
       <ul>
         {participate.map((item) => (
           <li key={item.id} className="flex mb-4 items-center">

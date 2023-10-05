@@ -51,7 +51,7 @@ function Logo() {
         <meta property="og:article:author" content="Ready! Act" />
       </Helmet>
       <div className="bg-primary-600 w-full h-[90vh] text-center flex justify-center items-center relative">
-        <h1 className="sr-only">R09M</h1>
+      <h1 className="sr-only">R09M(공구룸)</h1>
         <AnimationLogo />
         <Link to="/home" className="absolute bottom-10">
           <Button className="goToHomepage lgFontButton hover:hoverGoToHomepage">

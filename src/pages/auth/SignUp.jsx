@@ -88,93 +88,92 @@ function SignUp() {
         <meta property="og:image" content="favicon.png" />
         <meta property="og:article:author" content="Ready! Act" />
       </Helmet>
-      <h1 className="sr-only">R09M</h1>
+      <h1 className="sr-only">R09M(공구룸)</h1>
 
       <div className="px-4 py-2">
         <Header />
         <h2 className="pageTitle">회원가입</h2>
-     
 
-      <form encType="multipart/form-data" onSubmit={handleSignUp}>
-        <div className="relative flex flex-col gap-2 mt-4">
+        <form encType="multipart/form-data" onSubmit={handleSignUp}>
+          <div className="relative flex flex-col gap-2 mt-4 focus-within:outline focus-within:outline-blue-700">
+            <FormInput
+              ref={photoRef}
+              label="프로필 등록"
+              type="file"
+              name="photo"
+              placeholder="비밀번호를 한 번 더 입력해 주세요."
+              labelClassName="authLabel"
+              inputClassName="cursor-pointer absolute w-full h-full opacity-0"
+              onChange={handleDisplayUploadPhoto}
+              accept="*.jpg,*.png,*.webp,*.avif,*.svg,*.gif"
+            />
+
+            <div className="w-[80px] h-[80px] bg-slate-200/80 p-2 rounded-full mb-4">
+              <img
+                ref={uploadPhotoRef}
+                className="h-full border border-slate-400/50 rounded-full"
+                src={placeholderProfile}
+                alt="placeholder 이미지"
+              />
+            </div>
+          </div>
+
           <FormInput
-            ref={photoRef}
-            label="프로필 등록"
-            type="file"
-            name="photo"
-            placeholder="비밀번호를 한 번 더 입력해 주세요."
+            ref={nameRef}
+            label="이름"
+            type="text"
+            name="name"
+            placeholder="이름을 입력해 주세요."
             labelClassName="authLabel"
-            inputClassName="cursor-pointer absolute w-full h-full opacity-0"
-            onChange={handleDisplayUploadPhoto}
-            accept="*.jpg,*.png,*.webp,*.avif,*.svg,*.gif"
+            inputClassName="authInput"
           />
 
-          <div className="w-[80px] h-[80px] bg-slate-200/80 p-2 rounded-full mb-4">
-            <img
-              ref={uploadPhotoRef}
-              className="h-full border border-slate-400/50 rounded-full"
-              src={placeholderProfile}
-              alt="placeholder 이미지"
-            />
-          </div>
-        </div>
+          <FormInput
+            ref={emailRef}
+            label="이메일"
+            type="email"
+            name="email"
+            placeholder="이메일을 입력해 주세요."
+            labelClassName="authLabel"
+            inputClassName="authInput"
+          />
 
-        <FormInput
-          ref={nameRef}
-          label="이름"
-          type="text"
-          name="name"
-          placeholder="이름을 입력해 주세요."
-          labelClassName="authLabel"
-          inputClassName="authInput"
-        />
+          <FormInput
+            ref={passwordRef}
+            label="비밀번호"
+            type="password"
+            name="password"
+            placeholder="비밀번호를 입력해 주세요."
+            labelClassName="authLabel"
+            inputClassName="authInput"
+          />
 
-        <FormInput
-          ref={emailRef}
-          label="이메일"
-          type="email"
-          name="email"
-          placeholder="이메일을 입력해 주세요."
-          labelClassName="authLabel"
-          inputClassName="authInput"
-        />
+          <FormInput
+            ref={passwordConfirmRef}
+            label="비밀번호 확인"
+            type="password"
+            name="passwordConfirm"
+            placeholder="비밀번호를 한 번 더 입력해 주세요."
+            labelClassName="authLabel"
+            inputClassName="authInput"
+          />
 
-        <FormInput
-          ref={passwordRef}
-          label="비밀번호"
-          type="password"
-          name="password"
-          placeholder="비밀번호를 입력해 주세요."
-          labelClassName="authLabel"
-          inputClassName="authInput"
-        />
-
-        <FormInput
-          ref={passwordConfirmRef}
-          label="비밀번호 확인"
-          type="password"
-          name="passwordConfirm"
-          placeholder="비밀번호를 한 번 더 입력해 주세요."
-          labelClassName="authLabel"
-          inputClassName="authInput"
-        />
-
-        <Button type="submit" className="authActiveButton">
-          가입
-        </Button>
-        <Button
-          type="reset"
-          className="authinActiveButton"
-          onClick={() => {
-            uploadPhotoRef.current.src = placeholderProfile;
-          }}
-        >
-          취소
-        </Button>
-      </form>
-      <Link to="/signin">
-        <span className="authTransform">로그인</span>
-      </Link>
+          <Button type="submit" className="authActiveButton">
+            가입
+          </Button>
+          <Button
+            type="reset"
+            className="authinActiveButton"
+            onClick={() => {
+              uploadPhotoRef.current.src = placeholderProfile;
+            }}
+          >
+            취소
+          </Button>
+        </form>
+        <Link to="/signin">
+          <span className="authTransform">로그인</span>
+        </Link>
       </div>
     </>
   );
